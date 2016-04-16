@@ -1,6 +1,6 @@
 package bootstrap;
 
-import java.util.Arrays;
+import java.util.*;
 
 import javax.xml.bind.JAXBException;
 
@@ -9,10 +9,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.ContentNegotiatingViewResolver;
 import org.springframework.web.servlet.view.json.MappingJacksonJsonView;
 import org.springframework.web.servlet.view.xml.MarshallingView;
+import org.springframework.http.converter.*;
+import org.springframework.http.converter.xml.*;
 
 import bootstrap.data.Comment;
 import bootstrap.data.Comments;
@@ -20,6 +22,7 @@ import bootstrap.service.CommentsService;
 import bootstrap.service.InMemCommentsService;
 import bootstrap.web.CommentsController;
 import bootstrap.web.IndexController;
+
 
 @EnableWebMvc
 @Configuration
