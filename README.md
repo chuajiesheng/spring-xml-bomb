@@ -17,6 +17,7 @@ Plan:
 
 ## Steps
 1. Run the sample app via `mvn jetty:run`
+2. Upgrade sample code to use *3.2.0.RELEASE* which is one of the vulnerable version
 
 ## Reference
 1. [Spring sample app](https://github.com/earldouglas/spring-mvc-json-and-xml)
