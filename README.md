@@ -16,5 +16,7 @@ Plan:
 4. Demonstrate vulnerability
 
 ## Steps
+1. Run the sample app via `mvn jetty:run`
 
 ## Reference
+1. [Spring sample app](https://github.com/earldouglas/spring-mvc-json-and-xml)
