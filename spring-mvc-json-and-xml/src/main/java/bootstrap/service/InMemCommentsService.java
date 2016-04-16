@@ -12,10 +12,6 @@ public class InMemCommentsService implements CommentsService {
 
 	public InMemCommentsService() {
 		Comment comment = new Comment();
-		comment.setAuthorName("John Doe");
-		comment.setAuthorEmail("");
-		comment.setAuthorUrl("");
-		comment.setMessage("Hello, world!");
 		addComment(comment);
 	}
 
