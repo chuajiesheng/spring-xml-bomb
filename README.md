@@ -1,6 +1,7 @@
 # Vulnerability of Spring to XML Bomb
 
 Referencing CVE-2015-3192:
+
 1. [Pivotal CVE](http://pivotal.io/security/cve-2015-3192)
 2. [SourceClear CVE](https://srcclr.com/security/denial-service-dos-xml-bomb/java/s-1799)
 3. [Spring Bug Report](https://jira.spring.io/browse/SPR-13136)
@@ -21,3 +22,7 @@ Plan:
 
 ## Reference
 1. [Spring sample app](https://github.com/earldouglas/spring-mvc-json-and-xml)
+
+## Outcome
+1. Did not manage to trigger the vulnerability even if the converter was initialised
+2. Need to better understand Spring initialisation and setup
