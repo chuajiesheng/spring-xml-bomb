@@ -10,8 +10,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Comment {
 
-	@XmlValue
+	@XmlElement
 	public Long id;
+	@XmlElement
+	public String authorName;
 
 	public Long getId() {
 		return id;
@@ -19,5 +21,13 @@ public class Comment {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public String getAuthorName() {
+		return authorName;
+	}
+
+	public void setAuthorName(String authorName) {
+		this.authorName = authorName;
 	}
 }

@@ -23,10 +23,20 @@ import bootstrap.service.InMemCommentsService;
 import bootstrap.web.CommentsController;
 import bootstrap.web.IndexController;
 
+import org.springframework.http.converter.*;
+import org.springframework.http.converter.xml.*;
+
 
 @EnableWebMvc
 @Configuration
-public class ApplicationConfiguration {
+public class ApplicationConfiguration extends WebMvcConfigurerAdapter{
+	@Override
+	public void configureMessageConverters(
+			List<HttpMessageConverter<?>> converters) {
+		System.out.println("configureMessageConverters");
+		converters.add(new Jaxb2CollectionHttpMessageConverter<List<Comment>>());
+		super.configureMessageConverters(converters);
+	}
 
 	@Bean
 	public CommentsService commentsService() {

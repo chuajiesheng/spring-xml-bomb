@@ -39,6 +39,7 @@ public class CommentsController {
 	@RequestMapping(method = RequestMethod.POST)
 	public String postCommentForm(@ModelAttribute Comment comment) {
 		System.out.println("id=" + comment.getId());
+		System.out.println("authorName=" + comment.getAuthorName());
 		commentsService.addComment(comment);
 		return "redirect:comments";
 	}
